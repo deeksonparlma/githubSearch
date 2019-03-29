@@ -2,6 +2,8 @@
 ### Description
 This is a project that helps a user to search for profiles on Github and access information such as Number of repositories,followers,following and link to the Github profile.
 Live page :`https://deeksonparlma.github.io/githubSearch`
+## Author
+[Dickson Nyaigoti](https://github.com/deeksonparlma)
 
 #### Requirements
 1. install node
@@ -18,7 +20,7 @@ There are no known bugs at the moment but if you come across any feel free to co
 
 |  Behavior  | Input  | Output   |   
 | :--------: | :----: | :------: |
-| Enter username|wrong Github Username|Profile details|
+| Enter username|Right Github Username|Profile details|
 |Enter username|Wrong Github Username|error message|
 
 ## Contact
