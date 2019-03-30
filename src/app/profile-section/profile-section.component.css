@@ -1,5 +1,10 @@
 .img{
   height: 300px;
   width: 300px;
-  background-color: blue;
+  opacity: 0.6;
+}
+.profile{
+  height: 200px;
+  width: 200px;
+  margin: auto;
 }
