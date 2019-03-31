@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {HttpClient} from '@angular/common/http';
-import { Observable} from 'rxjs';
+// import { Observable} from 'rxjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,10 +20,9 @@ import { ProfileInformationComponent } from './profile-information/profile-infor
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClient,
-    Observable
+    // Observable
   ],
-  providers: [HttpClient],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
