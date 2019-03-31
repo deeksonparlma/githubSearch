@@ -1,11 +1,32 @@
-<app-search-section></app-search-section>
 <div class="container">
+  <div class="jumbotron">
+      <h1>WELCOME TO GITHUBSEARCH</h1>
+  </div>
   <div class="row">
-    <div class="col-md-5">
-      <app-profile-section></app-profile-section>
+    <div class="col-sm-6">
+      <div class="well" id="input">
+        <div class="input-form">
+          <input placeholder="Enter Username" [(ngModel)]="userName">
+          <button (click)="userLookup()">SEARCH</button>
+        </div>
+      </div>
     </div>
-    <div class="col-md-7">
-      <app-profile-information></app-profile-information>
+    <div class="col-sm-6">
+      <div class="well" id="display">
+        <img [src]="avatarUrl">
+        <div class="information" style="float:right">
+          <h3>{{githubData.name}}</h3>
+
+            <h4>Location:{{githubData.location}}</h4>
+            <h4>Repositories: {{githubData.public_repos}}</h4>
+            <h4>Followers: {{githubData.followers}}</h4>
+            <h4>Following: {{githubData.following}}</h4>
+            <h4><a [href]="githubData.html_url">View the Page Here:</a></h4>
+
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+
