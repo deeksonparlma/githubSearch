@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Http, Response} from '@angular/http';
+import {HttpClient} from '@angular/common/http';
 import { environment } from '../environments/environment';
 
 @Component({
@@ -9,7 +9,7 @@ import { environment } from '../environments/environment';
 })
 export class AppComponent {
 
-  constructor(private http:Http){}
+  constructor(private http:HttpClient){}
   userName="";
   githubData:any="";
   avatarUrl="./assets/avatar.png";
@@ -17,15 +17,15 @@ export class AppComponent {
 
 userLookup(){
 this.http.get("https://api.github.com/users/"+this.userName+"?access_token="+environment.access_token)
-.subscribe(
-  (response:Response)=>{
-    const userData=response.json();
-    this.githubData=userData;
-
-    this.avatarUrl=userData.avatar_url;
-    console.log(userData);
-  }
-)
+// .subscribe(
+//   (response:Response)=>{
+//     const userData=response.json();
+//     this.githubData=userData;
+//
+//     this.avatarUrl=userData.avatar_url;
+//     console.log(userData);
+//   }
+// )
 
 
 
