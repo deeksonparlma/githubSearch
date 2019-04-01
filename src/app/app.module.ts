@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { SearchSectionComponent } from './search-section/search-section.component';
 import { ProfileSectionComponent } from './profile-section/profile-section.component';
 import { ProfileInformationComponent } from './profile-information/profile-information.component';
+import { ProfileService } from './profile.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { ProfileInformationComponent } from './profile-information/profile-infor
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
     // Observable
   ],
-  providers: [],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,18 @@
 button{
   width: 100%;
 }
+.img{
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+}
+.icon{
+  height: 50px;
+  width: 50px;
+}
+hr{
+  padding-top: 20px;
+}
+.fun{
+  box-shadow: 3px 5px #033F47;
+}

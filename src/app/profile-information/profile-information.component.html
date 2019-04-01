@@ -1,23 +1,47 @@
-<div class="">
-  <label for="Profile_Name"><strong>Profile Name</strong></label>
-  <input type="text" class="form-control" name="" value="deeksonparlma" disabled>
+<br><form (ngSubmit)='findprofile()'>
+<br><div class="row fun">
+   <div class="col-md-2">
+     <img class="icon" src="http://cdn.onlinewebfonts.com/svg/img_326384.png" alt=""> <span class="title">Github Profile Search</span>
+   </div>
+   <div class="col-md-4">
+     <input type="search" [(ngModel)]="username" class="form-control" name="username" value="" placeholder="Enter a username">
+   </div>
+ </div>
+ <button type="submit" name="button">search</button>
+</form>
+ <hr>
+
+<div class="row">
+  <label for="Profile_Name"><strong>Profile Name</strong></label><br>
+  <p>{{profile.login}}</p>
 </div><br>
 <div class="row">
   <div class="col-md-4">
-    <label for=""><strong>Repositories</strong></label><br>
-    <p>56</p>
+     <img class="img" src="{{profile.avatar_url}}" >
+
   </div>
-  <div class="col-md-4">
-    <label for=""><strong>Followers</strong></label><br>
-    <p>9</p>
+  <div class="col-md-7">
+    <div class="col-md-4">
+      <label for=""><strong>Repositories</strong></label><br>
+      <p>{{profile.public_repos}}</p>
+    </div>
+    <div class="col-md-4">
+      <label for=""><strong>Followers</strong></label><br>
+      <p>{{profile.followers}}</p>
+    </div>
+    <div class="col-md-4">
+      <label for=""><strong>Following</strong></label><br>
+      <p>{{profile.following}}</p>
+    </div>
   </div>
-  <div class="col-md-4">
-    <label for=""><strong>Following</strong></label><br>
-    <p>0</p>
-  </div>
-</div><br><br>
+</div>
+<br><br>
 <div class="row">
-  <div class="col-md-12">
-    <a href="http://github.com/deeksonparlma"><button type="button" class="btn btn-info" name="button">Link to profile on Github</button></a>
+  <div class="col-md-2">
+    company <br>
+    <p>{{profile.company}}</p>
+  </div>
+  <div class="col-md-3">
+    <a href="https://github.com/{{profile.login}}"><button type="button" class="btn btn-info" name="button">Link to profile on Github</button></a>
   </div>
 </div>

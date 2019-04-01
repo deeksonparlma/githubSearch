@@ -1,21 +1,30 @@
 import { Injectable } from '@angular/core';
-import { Repository } from './repository';
-import { User } from './user';
-import{Observable} from 'rxjs';
-import{HttpClient} from '@angular/common/http';
-import{environment} from '../environments/environment'
+import {HttpClient} from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ProfileService {
-  username:string="";
-  baseUrl:string="https://api.github.com/"
-    constructor(private http:HttpClient) { }
-    getRepos(UserName:string): Observable<Repository[]>{
-      return this.http.get<Repository[]>(environment.apiUrl+this.username+environment.token)
-    }
-    OnInit(){
-      this.username="deeksonparlma"
-    }
-  }
+
+  private username: string;
+
+  constructor(private http: HttpClient) {
+      this.username = 'deeksonparlma';
+ }
+ getprofileInfo(username) {
+   console.log(this.username);
+
+   return this.http.get(environment.apiUrl+ this.username + environment.token);
+
+ }
+ getprofileRepos() {
+
+return this.http.get(environment.apiUrl+ this.username + "/repos");
+
+
+   }
+
+ updateprofile(username: string) {
+   this.username = username;
+ }
+
+}
