@@ -15,4 +15,3 @@ export class ProfileService {
       return this.http.get<Repository[]>(this.baseUrl+'users/'+UserName+'/repos?access_token='+environment.token)
     }
   }
-}
