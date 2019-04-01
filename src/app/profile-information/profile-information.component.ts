@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from './user';
-import { Repository } from './repository';
+import { User } from '../user';
+import { Repository } from '../repository';
 
 @Component({
   selector: 'app-profile-information',
