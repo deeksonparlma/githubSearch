@@ -9,9 +9,13 @@ import{environment} from '../environments/environment'
   providedIn: 'root'
 })
 export class ProfileService {
+  username:string="";
   baseUrl:string="https://api.github.com/"
     constructor(private http:HttpClient) { }
     getRepos(UserName:string): Observable<Repository[]>{
-      return this.http.get<Repository[]>(this.baseUrl+'users/'+UserName+'/repos?access_token='+environment.token)
+      return this.http.get<Repository[]>(environment.apiUrl+this.username+environment.token)
+    }
+    OnInit(){
+      this.username="deeksonparlma"
     }
   }

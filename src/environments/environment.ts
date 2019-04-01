@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl :"https://api.github.com/users/deeksonparlma?access_token=e3891152df2a12ec5ed0b40e6205b49fef981ed9",
-  token:"e3891152df2a12ec5ed0b40e6205b49fef981ed9"
+  apiUrl :"https://api.github.com/users/",
+  token:"?access_token=e3891152df2a12ec5ed0b40e6205b49fef981ed9"
 }
 ;
 
