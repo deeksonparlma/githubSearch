@@ -1,47 +1,51 @@
-<br><form (ngSubmit)='findprofile()'>
-<br><div class="row fun">
-   <div class="col-md-2">
+<br>
+<form (ngSubmit)='findprofile()'>
+<div class="row">
+   <div class="col-md-4">
      <img class="icon" src="http://cdn.onlinewebfonts.com/svg/img_326384.png" alt=""> <span class="title">Github Profile Search</span>
    </div>
    <div class="col-md-4">
-     <input type="search" [(ngModel)]="username" class="form-control" name="username" value="" placeholder="Enter a username">
+     <input type="search" [(ngModel)]="username" class="form-control" name="username" value="" (keyup) = findprofile() placeholder="Enter a username">
    </div>
  </div>
- <button type="submit" name="button">search</button>
+ <!-- <button type="submit" name="button">search</button> -->
 </form>
  <hr>
-
-<div class="row">
-  <label for="Profile_Name"><strong>Profile Name</strong></label><br>
-  <p>{{profile.login}}</p>
-</div><br>
-<div class="row">
-  <div class="col-md-4">
-     <img class="img" src="{{profile.avatar_url}}" >
-
-  </div>
-  <div class="col-md-7">
-    <div class="col-md-4">
-      <label for=""><strong>Repositories</strong></label><br>
-      <p>{{profile.public_repos}}</p>
-    </div>
-    <div class="col-md-4">
-      <label for=""><strong>Followers</strong></label><br>
-      <p>{{profile.followers}}</p>
-    </div>
-    <div class="col-md-4">
-      <label for=""><strong>Following</strong></label><br>
-      <p>{{profile.following}}</p>
-    </div>
-  </div>
-</div>
-<br><br>
-<div class="row">
-  <div class="col-md-2">
-    company <br>
-    <p>{{profile.company}}</p>
-  </div>
-  <div class="col-md-3">
-    <a href="https://github.com/{{profile.login}}"><button type="button" class="btn btn-info" name="button">Link to profile on Github</button></a>
-  </div>
-</div>
+ <div class="row">
+   <div class="col-md-3">
+      <img class="img" src="{{profile.avatar_url}}" ><br>
+      <strong>{{profile.name}} <br>Email: {{profile.email}} <br> Blog: <a href="{{profile.blog}}">{{profile.blog}}</a></strong>
+   </div>
+   <div class="col-md-9">
+     <div class="row">
+       <div class="col-md-2">
+         <label for="Profile_Name"><strong>Profile Name</strong></label>
+         <span>{{profile.login}}</span>
+       </div>
+       <div class="col-md-2">
+         <label for=""><strong>Repositories</strong></label><br>
+         <span>{{profile.public_repos}}</span>
+       </div>
+       <div class="col-md-2">
+         <label for=""><strong>Followers</strong></label><br>
+         <span>{{profile.followers}}</span>
+       </div>
+       <div class="col-md-2">
+         <label for=""><strong>Following</strong></label><br>
+       <span>{{profile.following}}</span>
+       </div>
+       <div class="col-md-2">
+         <label for=""><strong>Company</strong></label>
+         <span>{{profile.company}}</span>
+       </div>
+       <div class="col-md-2">
+         <label for=""> <strong>Date of creation</strong></label>
+         <span>{{profile.created_at}}</span>
+       </div>
+     </div>
+     <a href="https://github.com/{{profile.login}}"><button type="button" class="btn btn-info" name="button">Link to profile on Github</button></a>
+   </div>
+ </div>
+ <div class="container">
+   
+ </div>

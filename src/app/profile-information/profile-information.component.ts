@@ -13,7 +13,7 @@ import {FormsModule} from '@angular/forms';
 })
 export class ProfileInformationComponent implements OnInit {
   profile: any = [];
-  repos: any = [];
+  repos:any  = [];
   username: string;
 
   constructor(private detailspageServe: ProfileService) { }
