@@ -18,7 +18,7 @@ export class ProfileService {
  }
  getprofileRepos() {
 
-return this.http.get(environment.apiUrl+ this.username + "/repos");
+return this.http.get(environment.apiUrl+"/"+ this.username + "/repos");
 
 
    }

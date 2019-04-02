@@ -14,7 +14,7 @@ import {FormsModule} from '@angular/forms';
 export class ProfileInformationComponent implements OnInit {
   profile: any = [];
   repos:any  = [];
-  username: string;
+  username: string='deeksonparlma';
 
   constructor(private detailspageServe: ProfileService) { }
 
